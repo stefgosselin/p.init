@@ -2,18 +2,7 @@
     "name": "stefgosselin/p.init",
     "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
     "require": {
-        "squizlabs/php_codesniffer": "dev-master",
         "phing/phing": "~2.9@dev",
-        "tedivm/jshrink": "1.0.1",
-        "pear/archive_tar": "1.3.13",
-        "phpunit/php-timer": "1.0.5",
-        "phpunit/phpunit": "4.3.5",
-        "sebastian/phpcpd": "2.0.*@dev",
-        "phpdocumentor/phpdocumentor": "dev-master",
-        "phpunit/php-code-coverage": "2.0.11",
-        "phploc/phploc": "2.0.6",
-        "symfony/symfony": "2.6.0",
-        "pear/versioncontrol_git": "dev-master"
     },
     "authors": [
         {
