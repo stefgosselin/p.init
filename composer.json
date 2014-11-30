@@ -1,7 +1,10 @@
 {
     "name": "stefgosselin/p.init",
     "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
-    "version": "0.0.3",
+    "type": "application",
+    "keywords": ["developpment", "install"],
+    "license": "MIT",
+    "time": "2014-11-30",
     "require": {
         "codeception/codeception": "2.0.8",
         "phpmd/phpmd": "2.1.3",
@@ -12,13 +15,13 @@
         "phpdocumentor/phpdocumentor": "2.8.1",
         "phploc/phploc": "2.0.6",
         "phing/phing": "2.9.0",
-        "symfony/symfony": "2.6.0"
+        "symfony/symfony": "2.5.7"
     },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink"
-    }
+    },
     "authors": [
         {
             "name": "Stef",
@@ -27,13 +30,6 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-0": { "": "src/" }
     }
 }
-
-symfony/dependency-injection suggests installing symfony/proxy-manager-bridge (Generate service proxies to lazy load them)
-codeception/codeception suggests installing codeception/phpbuiltinserver (Extension to start and stop PHP built-in web server for your tests)
-codeception/codeception suggests installing codeception/specify (BDD-style code blocks)
-codeception/codeception suggests installing codeception/verify (BDD-style assertions)
-codeception/codeception suggests installing phpseclib/phpseclib (Extension required to use the SFTP option in the FTP Module.)
-
