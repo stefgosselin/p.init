@@ -11,8 +11,14 @@
         "sebastian/phpcpd": "2.0.1",
         "phpdocumentor/phpdocumentor": "2.8.1",
         "phploc/phploc": "2.0.6",
-        "phing/phing": "2.9.0"
+        "phing/phing": "2.9.0",
+        "symfony/symfony": "2.6.0"
     },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink"
+    }
     "authors": [
         {
             "name": "Stef",
@@ -24,4 +30,10 @@
         "psr-4": { "": "src/" }
     }
 }
+
+symfony/dependency-injection suggests installing symfony/proxy-manager-bridge (Generate service proxies to lazy load them)
+codeception/codeception suggests installing codeception/phpbuiltinserver (Extension to start and stop PHP built-in web server for your tests)
+codeception/codeception suggests installing codeception/specify (BDD-style code blocks)
+codeception/codeception suggests installing codeception/verify (BDD-style assertions)
+codeception/codeception suggests installing phpseclib/phpseclib (Extension required to use the SFTP option in the FTP Module.)
 
