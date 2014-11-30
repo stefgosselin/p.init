@@ -2,7 +2,7 @@
     "name": "stefgosselin/p.init",
     "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
     "require": {
-        "pear/versioncontrol_git": "dev-master",
+        "pear/versioncontrol_git": "*",
         "phpmd/phpmd": "dev-master",
         "phing/phing": "~2.9@dev",
         "tedivm/jshrink": "1.0.1",
