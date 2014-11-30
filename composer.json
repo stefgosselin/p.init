@@ -1,0 +1,17 @@
+{
+    "name": "stefgosselin/p.init",
+    "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
+    "require": {
+        "phing/phing": "~2.9@dev",
+        "phpmd/phpmd": "phpcs",
+        "squizlabs/php_codesniffer": "dev-master",
+        "symfony/symfony": "~3.0@dev"
+    },
+    "authors": [
+        {
+            "name": "Stef",
+            "email": "stef@3wsimple.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
