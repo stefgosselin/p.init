@@ -12,7 +12,7 @@
         "phpdocumentor/phpdocumentor": "dev-master",
         "phpunit/php-code-coverage": "2.0.11",
         "phploc/phploc": "2.0.6",
-        "symfony/symfony": "2.6.0"
+        "symfony/symfony": "2.6.0",
         "pear/versioncontrol_git": "dev-master"
     },
     "authors": [
