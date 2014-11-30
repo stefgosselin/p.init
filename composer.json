@@ -1,8 +1,9 @@
 {
     "name": "stefgosselin/p.init",
     "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
-    "version": "dev",
+    "version": "0.0.2",
     "require": {
+        "phpdocumentor/phpdocumentor": "2.8.1",
         "phing/phing": "2.9.0"
     },
     "authors": [
