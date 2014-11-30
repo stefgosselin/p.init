@@ -4,6 +4,7 @@
     "version": "0.0.2",
     "require": {
         "phpdocumentor/phpdocumentor": "2.8.1",
+        "phploc/phploc": "2.0.6",
         "phing/phing": "2.9.0"
     },
     "authors": [
