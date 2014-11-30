@@ -2,7 +2,7 @@
     "name": "stefgosselin/p.init",
     "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
     "require": {
-        "phing/phing": "~2.9@dev",
+        "phing/phing": "~2.9@dev"
     },
     "authors": [
         {
