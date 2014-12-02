@@ -1,6 +1,6 @@
 {
     "name": "stefgosselin/p.init",
-    "description": "P.init is a simple tool that helps install a few popular frameworks quickly.",
+    "description": "P.init (Project init) is a simple tool I created to assist me in setting up a generic framework's codebase quickly in a testing framework environnement.",
     "type": "application",
     "keywords": ["developpment", "install"],
     "license": "MIT",
@@ -24,8 +24,6 @@
             "phpunit -c app/"
         ]
     },
-
-
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
