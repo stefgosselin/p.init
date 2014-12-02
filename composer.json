@@ -18,7 +18,7 @@
         "symfony/symfony": "2.5.7"
     },
    "scripts": {
-        "pre-install-cmd": "MyVendor\\MyClass::doSomething",
+        "pre-install-cmd": "Pinit\\Pinit_setup::setup",
         "post-install-cmd": [
             "MyVendor\\MyClass::warmCache",
             "phpunit -c app/"
@@ -39,6 +39,6 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "pinit": "src/" }
     }
 }
