@@ -1,0 +1,4 @@
+pinit_project:
+    resource: "@PinitProjectBundle/Resources/config/routing.yml"
+    prefix:   /
+

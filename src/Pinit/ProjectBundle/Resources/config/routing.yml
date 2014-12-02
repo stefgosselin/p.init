@@ -1,0 +1,7 @@
+pinit_project_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PinitProjectBundle:Default:index }
+
+random:
+    path:     /random/{limit}
+    defaults: { _controller: PinitProjectBundle:Random:index }
