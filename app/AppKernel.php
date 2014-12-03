@@ -16,6 +16,16 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
+           // Then add SonataAdminBundle
+           new Sonata\AdminBundle\SonataAdminBundle(),
+
+
             new Pinit\ProjectBundle\PinitProjectBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Pinit\UserBundle\PinitUserBundle(),
