@@ -1,0 +1,3 @@
+pinit_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PinitUserBundle:Default:index }
