@@ -1,10 +1,10 @@
 <VirtualHost *:80>
-    DocumentRoot /var/www/symfony-kickstarter/symfony-kickstarter/web
-    ServerName symfony-kickstarter.local
-    ErrorLog /var/log/apache2/acme-symfony-kickstarter-error.log
-    CustomLog /var/log/apache2/acme-symfony-kickstarter-access.log common
-    php_value error_log /home/devs/www/acme/symfony-kickstarter/app/logs/php-error.log
-    <Directory /var/www/symfony-kickstarter/symfony-kickstarter/web>
+    DocumentRoot /var/www/p.init/p.init/web
+    ServerName pinit.local
+    ErrorLog /var/log/apache2/pinit-error.log
+    CustomLog /var/log/apache2/pinit-access.log common
+    php_value error_log /var/www/p.init/p.init/app/logs/php-error.log
+    <Directory /var/www/p.init/p.init/web>
         Require all granted
         # Or on Apache 2.2
         # Allow from all
