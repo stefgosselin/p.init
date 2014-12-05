@@ -1,170 +1,119 @@
-Symfony Standard Edition
-========================
+# Symfony Kickstarter Edition
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+Welcome to the Symfony Kickstarter Edition - a fully-functional Symfony2
+application that you can be used as a skeleton for a new applications or
+for demonstration purposes.
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
+This document contains information on what's required to use this Kickstarter,
+what it contains, and how to get set it up.
 
-1) Installing the Standard Edition
-----------------------------------
+[![Build Status](https://secure.travis-ci.org/bicpi/symfony-kickstarter.png)](http://travis-ci.org/bicpi/symfony-kickstarter)
 
-When it comes to installing the Symfony Standard Edition, you have the
-following options.
+## Requirements
 
-### Use Composer (*recommended*)
+* PHP 5.4+
+* Some installation instructions assume an Ubuntu based system
+* Composer, bower, PHPUnit, uglifycss, uglifyjs
 
-As Symfony uses [Composer][2] to manage its dependencies, the recommended way
-to create a new project is to use it.
+## Features
 
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+* Common Symfony2 features like controllers, templating, bundle integration, database integration
+* Git configuration
+* Permission setup helper script
+* Integration and demonstration of 3rd party software:
+    * Bower
+    * FOSUserBundle
+    * FOSJsRoutingBundle
+    * KnpPaginatorbundle
+    * KNP Labs Doctrine behaviors
+    * DoctrineFixturesBundle
+    * JMSDiExtraBundle
+    * JMSDiSecurityBundle
+    * LiipFunctionalTestBundle
+    * PhpExcel
+    * HtmlConverterBundle
+    * jQuery
+    * jQueryUI
+    * holder.js
+    * Assetic
+    * Bootstrap3
+    * Travis configuration
+* Concept demos:
+    * Multilingual registration form
+    * Fixtures
+    * Admin/User area
+    * Excel Export
+    * Send Emails including automatically generated plain text part
+    * User impersonation
+    * HTTP cache and ESI
+    * Security and Voters
+    * Ajax
+    * Pagination with sorting
+    * Authentication/Authorization
+    * User profile
+    * Custom Error Pages
+    * Functional tests
+    * Custom Twig extension
+    * Miscellaneous tricks and helpers
 
-    curl -s http://getcomposer.org/installer | php
+## Installation
 
-Then, use the `create-project` command to generate a new Symfony application:
+Follow the next steps to get the Symfony Kickstarter up and running.
 
-    php composer.phar create-project symfony/framework-standard-edition path/to/install
+### Install vendors
 
-Composer will install Symfony and all its dependencies under the
-`path/to/install` directory.
+Install vendors with Composer:
 
-### Download an Archive File
+    $ composer install
 
-To quickly test Symfony, you can also download an [archive][3] of the Standard
-Edition and unpack it somewhere under your web server root directory.
+Enter basic configuration during install process, e.g. database credentials.
 
-If you downloaded an archive "without vendors", you also need to install all
-the necessary dependencies. Download composer (see above) and run the
-following command:
+### Set permissions
 
-    php composer.phar install
+Set correct permissions for cache and log folder using ACLs:
 
-2) Checking your System Configuration
--------------------------------------
+    $ ./fix-perms.sh
 
-Before starting coding, make sure that your local system is properly
-configured for Symfony.
+### Setup Virtual Host
 
-Execute the `check.php` script from the command line:
+Setup virtual host configuration on Ubuntu:
 
-    php app/check.php
+    $ sudo cp app/config/sample.vhost /etc/apache2/sites-available/acme-symfony-kickstarter.conf
+    $ sudo nano /etc/apache2/sites-available/acme-symfony-kickstarter.conf # do custom changes
+    $ sudo a2ensite acme-symfony-kickstarter
+    $ sudo apache2ctl -t
+    $ sudo service apache2 graceful
 
-The script returns a status code of `0` if all mandatory requirements are met,
-`1` otherwise.
+### Check Config
 
-Access the `config.php` script from a browser:
+Check configuration on console:
 
-    http://localhost/path-to-project/web/config.php
+   $ php app/check.php
 
-If you get any warnings or recommendations, fix them before moving on.
+Check configuration on webserver via `http://symfony-kickstarter.devs/config.php`.
 
-3) Browsing the Demo Application
---------------------------------
+### Setup Database
 
-Congratulations! You're now ready to use Symfony.
+    $ app/console doctrine:database:create
+    $ app/console doctrine:schema:create
+    $ app/console doctrine:fixtures:load
 
-From the `config.php` page, click the "Bypass configuration and go to the
-Welcome page" link to load up your first Symfony page.
+### Bower
 
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the `config.php` page.
+Install frontend dependencies using bower:
 
-To see a real-live Symfony page in action, access the following page:
+    $ bower install
 
-    web/app_dev.php/demo/hello/Fabien
+### Assetic File Watcher
 
-4) Getting started with Symfony
--------------------------------
+If needed, activate Assetic file watcher for development:
 
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
+    $ app/console assetic:dump --watch --force
 
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
+Dump your assets for production:
 
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
+    $ app/console assetic:dump --env=prod
 
-A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
+### Execute Unit/Functional tests
 
-  * delete the `src/Acme` directory;
-
-  * remove the routing entry referencing AcmeDemoBundle in `app/config/routing_dev.yml`;
-
-  * remove the AcmeDemoBundle from the registered bundles in `app/AppKernel.php`;
-
-  * remove the `web/bundles/acmedemo` directory;
-
-  * empty the `security.yml` file or tweak the security configuration to fit
-    your needs.
-
-What's inside?
----------------
-
-The Symfony Standard Edition is configured with the following defaults:
-
-  * Twig is the only configured template engine;
-
-  * Doctrine ORM/DBAL is configured;
-
-  * Swiftmailer is configured;
-
-  * Annotations for everything are enabled.
-
-It comes pre-configured with the following bundles:
-
-  * **FrameworkBundle** - The core Symfony framework bundle
-
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
-
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
-    code
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  http://symfony.com/doc/2.6/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://symfony.com/download
-[4]:  http://symfony.com/doc/2.6/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.6/index.html
-[6]:  http://symfony.com/doc/2.6/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.6/book/doctrine.html
-[8]:  http://symfony.com/doc/2.6/book/templating.html
-[9]:  http://symfony.com/doc/2.6/book/security.html
-[10]: http://symfony.com/doc/2.6/cookbook/email.html
-[11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+    $ phpunit -c app/
