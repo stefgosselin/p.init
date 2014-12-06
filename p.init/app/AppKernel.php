@@ -26,7 +26,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new bicpi\Bundle\HtmlConverterBundle\BicpiHtmlConverterBundle(),
             new Acme\DemoBundle\DemoBundle(),
-          //  new Pinit\ProjectBundle\PinitProjectBundle(),
+            new Pinit\ProjectBundle\PinitProjectBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

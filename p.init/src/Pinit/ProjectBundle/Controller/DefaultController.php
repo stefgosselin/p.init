@@ -5,14 +5,22 @@ namespace Pinit\ProjectBundle\Controller;
 use Pinit\ProjectBundle\Entity\Project;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
 class DefaultController extends Controller
-{
-    public function indexAction($name)
+{  /**
+   * @Route("/", name="homePage")
+   * @Template
+   * @Cache(smaxage=60)
+   */
+    public function homePageAction()
     {
-        return $this->render('PinitProjectBundle:Default:index.html.twig', array('name' => $name));
+        return [];
     }
-   
+
+
     public function createAction()
     {
         $id = rand(1,15);

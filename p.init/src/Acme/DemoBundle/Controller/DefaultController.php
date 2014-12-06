@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\SecurityContext;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/homepage", name="homepage")
      * @Template
      * @Cache(smaxage=60)
      */
