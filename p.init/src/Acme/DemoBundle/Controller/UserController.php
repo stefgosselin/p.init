@@ -8,12 +8,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Route("/user")
+ * @Route("/user_old")
  */
 class UserController extends Controller
 {
     /**
-     * @Route("/", name="user")
+     * @Route("/", name="user_old")
      * @Template
      */
     public function indexAction()

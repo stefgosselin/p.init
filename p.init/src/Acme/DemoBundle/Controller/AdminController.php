@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * @Route("/admin")
+ * @Route("/admin_old")
  */
 class AdminController extends Controller
 {

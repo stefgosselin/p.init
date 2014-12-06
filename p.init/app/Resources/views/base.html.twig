@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{% spaceless %}{% if block('title') %}{{ block('title') }} | {% endif %}Symfony Kickstarter{% endspaceless %}</title>
+        <title>{% spaceless %}{% if block('title') %}{{ block('title') }} | {% endif %}P.init{% endspaceless %}</title>
         {% stylesheets
-            '//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/cupertino/jquery-ui.css'
+            '//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
+            '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/cupertino/jquery-ui.css'
             '@DemoBundle/Resources/public/css/styles.scss'
             filter='cssrewrite,?uglifycss' output='generated/all.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
@@ -58,9 +58,9 @@
         </div>
 
         {% javascripts
-            '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
-            '//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'
+            '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+            '//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
+            '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'
             '@FOSJsRoutingBundle/Resources/public/js/router.js'
             'bower/holderjs/holder.js'
             '@DemoBundle/Resources/public/js/main.js'

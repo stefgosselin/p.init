@@ -27,6 +27,8 @@ class AppKernel extends Kernel
             new bicpi\Bundle\HtmlConverterBundle\BicpiHtmlConverterBundle(),
             new Acme\DemoBundle\DemoBundle(),
             new Pinit\ProjectBundle\PinitProjectBundle(),
+            new Pinit\UserBundle\PinitUserBundle(),
+            new Pinit\AdminBundle\PinitAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
