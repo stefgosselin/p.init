@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
 class DefaultController extends Controller
 {  /**
-   * @Route("/", name="homePage")
+   * @Route("/", name="homepage")
    * @Template
    * @Cache(smaxage=60)
    */
