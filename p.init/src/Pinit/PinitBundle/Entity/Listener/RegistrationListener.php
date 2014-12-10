@@ -1,10 +1,10 @@
 <?php
 
-namespace Acme\DemoBundle\Entity\Listener;
+namespace Pinit\PinitBundle\Entity\Listener;
 
 use JMS\DiExtraBundle\Annotation as DI;
-use Acme\DemoBundle\Entity\Event\RegistrationEvent;
-use Acme\DemoBundle\Service\Mailer;
+use Pinit\PinitBundle\Entity\Event\RegistrationEvent;
+use Pinit\PinitBundle\Service\Mailer;
 
 /**
  * @DI\Service
@@ -17,7 +17,7 @@ class RegistrationListener
 
     /**
      * @DI\InjectParams({
-     *     "mailer" = @DI\Inject("acme.mailer"),
+     *     "mailer" = @DI\Inject("pinit.mailer"),
      *     "adminEmail" = @DI\Inject("%admin_email%")
      * })
      */
@@ -34,7 +34,7 @@ class RegistrationListener
     {
         $this->mailer->send(
             (new \Swift_Message())->setTo($this->adminEmail),
-            'DemoBundle:Registration:notification.html.twig',
+            'PinitBundle:Registration:notification.html.twig',
             ['registration' => $event->getRegistration()]
         );
     }

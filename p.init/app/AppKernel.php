@@ -25,10 +25,8 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new bicpi\Bundle\HtmlConverterBundle\BicpiHtmlConverterBundle(),
-            new Acme\DemoBundle\DemoBundle(),
-            new Pinit\ProjectBundle\PinitProjectBundle(),
+           // new Acme\DemoBundle\DemoBundle(),
             new Pinit\PinitBundle\PinitBundle(),
-            new Pinit\WebDocsBundle\PinitWebDocsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

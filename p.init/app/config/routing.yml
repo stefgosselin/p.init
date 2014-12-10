@@ -1,13 +1,8 @@
 
-AcmeDemoBundle:
-    resource: "@DemoBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-PinitProjectBundle:
-     resource: "@PinitProjectBundle/Controller/"
-     type:     annotation
-     prefix:   /
+#AcmeDemoBundle:
+#    resource: "@DemoBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 
 PinitBundle:
      resource: "@PinitBundle/Controller/"
