@@ -39,6 +39,6 @@ class UserProfileType extends BaseType
 
     public function getName()
     {
-        return 'acme_user_profile';
+        return 'pinit_user_profile';
     }
 }

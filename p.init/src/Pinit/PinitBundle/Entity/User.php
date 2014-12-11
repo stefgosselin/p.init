@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 
 /**
- * @ORM\Entity(repositoryClass="Acme\DemoBundle\Entity\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="Pinit\PinitBundle\Entity\Repository\UserRepository")
  * @ORM\Table(name="FosUser")
  */
 class User extends BaseUser
