@@ -43,4 +43,19 @@ class DefaultController extends Controller
       return [];
     }
 
+
+    /**
+     * @Template
+     */
+    public function quickLoginAction()
+    {
+      $request = $this->container->get('request');
+      $session = $request->getSession();
+
+      return [
+        'last_username' => (null === $session) ? '' : $session->get(SecurityContext::LAST_USERNAME),
+        'csrf_token' => $this->container->get('form.csrf_provider')->generateCsrfToken('authenticate'),
+      ];
+    }
+
 }

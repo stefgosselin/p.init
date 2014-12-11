@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\DemoBundle\Entity\Repository;
+namespace Pinit\PinitBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
