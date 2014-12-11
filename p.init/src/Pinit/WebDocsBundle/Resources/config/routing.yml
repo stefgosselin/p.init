@@ -1,3 +1,0 @@
-web_docs_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: WebDocsBundle:Default:index }
