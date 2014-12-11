@@ -15,12 +15,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
   /**
-   * @Route("/admin")
+   * @Route("/admin_old")
    */
 class AdminController extends Controller
 {
   /**
-   * @Route("/", name="admin")
+   * @Route("/", name="admin_old")
    * @Template
    */
   public function indexAction(Request $request)

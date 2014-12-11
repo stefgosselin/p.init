@@ -10,12 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Acme\DemoBundle\Entity\Registration;
 
 /**
- * @Route("/{_locale}/registration", defaults={"_locale"="en"}, requirements={"_locale"="en|de"})
+ * @Route("/{_locale}/registration_ks", defaults={"_locale"="en"}, requirements={"_locale"="en|de"})
  */
 class RegistrationController extends Controller
 {
     /**
-     * @Route("/", name="registration")
+     * @Route("/", name="registration_ks")
      * @Template
      */
     public function registerAction(Request $request)
@@ -52,7 +52,7 @@ class RegistrationController extends Controller
     }
 
     /**
-     * @Route("/thank-you", name="registration_thanks")
+     * @Route("/thank-you_old", name="registration_thanks_ks")
      * @Template
      */
     public function registerThanksAction(Request $request)

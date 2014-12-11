@@ -1,6 +1,6 @@
 security:
     encoders:
-        Acme\DemoBundle\Entity\User: sha512
+        Pinit\PinitBundle\Entity\User: sha512
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER

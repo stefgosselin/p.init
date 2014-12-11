@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\SecurityContext;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/homepage_old", name="homepage")
+     * @Route("/homepage_old", name="homepage_ks")
      * @Template
      * @Cache(smaxage=60)
      */
@@ -23,7 +23,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/navigation", name="navigation")
+     * @Route("/navigation_old", name="navigation_ks")
      * @Template
      * @Cache(maxage=0)
      */

@@ -1,23 +1,15 @@
 
-AcmeDemoBundle:
-    resource: "@DemoBundle/Controller/"
-    type:     annotation
-    prefix:   /
+#AcmeDemoBundle:
+#    resource: "@DemoBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 
-PinitProjectBundle:
-     resource: "@PinitProjectBundle/Controller/"
+PinitBundle:
+     resource: "@PinitBundle/Controller/"
      type:     annotation
      prefix:   /
 
-PinitUserBundle:
-     resource: "@PinitUserBundle/Controller/"
-     type:     annotation
-     prefix:   /
 
-PinitAdminBundle:
-      resource: "@PinitAdminBundle/Controller/"
-      type:     annotation
-      prefix:   /
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
